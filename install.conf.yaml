@@ -1,0 +1,17 @@
+- defaults:
+	link:
+		relink: true
+
+- clean: ['~']
+
+- link:
+	~/.dotfiles: ''
+	~/.tmux.conf: tmux.conf
+	~/.vim/bundle/Vundle.vim:
+		       create: true
+		             path: 'Vundle.vim'
+			           force: true
+	~/.vimrc: vimrc
+
+- shell:
+	-[git submodule update --init --recursive, Installing submodules]
