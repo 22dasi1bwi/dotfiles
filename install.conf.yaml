@@ -11,6 +11,10 @@
                 create: true
                 path: 'Vundle.vim'
                 force: true
+    ~/.config/fish:
+                create: true
+                path: 'fish'
+                force: true
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
