@@ -1,0 +1,44 @@
+[user]
+	name = Silvio D'Alessandro
+	email = silvio.dalessandro@novatec-gmbh.de
+[core]
+	editor = vim
+[merge]
+        tool = mymeld
+	conflictstyle = diff3	
+[alias]
+	lg = log --color --graph --pretty=format:'%C(bold magenta)%h%Creset-%C(bold yellow)%d%Creset%s%C(bold green)(%cr)%C(bold white)<%an>%Creset' --abbrev-commit
+	lga = log --branches --remotes --tags --color --graph --pretty=format:'%C(bold magenta)%h%Creset-%C(bold yellow)%d%Creset%s%C(bold green)(%cr)%C(bold white)<%an>%Creset' --abbrev-commit
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+	rb = rebase
+	pu = push
+	aa = add .
+	fe = fetch
+	feo = fetch origin
+	re = reset
+	cob = checkout -b 
+	cp = cherry-pick
+	dist = diff --staged
+	p = pull 
+
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
+[color "status"]
+added = green
+changed = blue bold
+untracked = cyan
+[mergetool "mymeld"]
+	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $BASE $REMOTE $MERGED
+[color]
+	ui = true

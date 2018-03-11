@@ -15,6 +15,7 @@
                 create: true
                 path: 'fish'
                 force: true
+    ~/.gitconfig: gitconfig
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
