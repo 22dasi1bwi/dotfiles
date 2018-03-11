@@ -1,4 +1,3 @@
-set shell=/bin/bash
 set nocompatible " be iMproved, required
 filetype on             " detect type of file
 filetype indent on      " load indent file for specific file type
@@ -39,6 +38,11 @@ let g:airline_solarized_bg='dark'
 
 set scrolloff=3         " keep 3 lines when scrolling
 set ai                  " set auto-indenting on for programming
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark
+set termguicolors
 
 set showcmd             " display incomplete commands
 set nobackup            " do not keep a backup file
