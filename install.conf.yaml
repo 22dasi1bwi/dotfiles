@@ -16,6 +16,7 @@
                 path: 'fish'
                 force: true
     ~/.gitconfig: gitconfig
+    ~/.xinitrc: xinitrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
