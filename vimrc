@@ -41,8 +41,9 @@ set ai                  " set auto-indenting on for programming
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+colorscheme solarized
 set background=dark
-set termguicolors
+" set termguicolors
 
 set showcmd             " display incomplete commands
 set nobackup            " do not keep a backup file
@@ -58,6 +59,9 @@ set smartcase           " no ignorecase if Uppercase char present
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell        " turn off visual bell
 
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 20
 set backspace=indent,eol,start  " make that backspace key work the way it should
 
 set t_RV=               " http://bugs.debian.org/608242, http://groups.google.com/group/vim_dev/browse_thread/thread/9770ea844cec3282
