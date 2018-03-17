@@ -5,6 +5,10 @@
 - clean: ['~']
 
 - link:
+    ~/installed-packages:
+                create: true
+                path: installed-packages
+                force: true
     ~/.tmux.conf: tmux.conf
     ~/.tigrc: tigrc
     ~/.vimrc: vimrc
