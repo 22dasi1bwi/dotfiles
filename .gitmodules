@@ -2,10 +2,10 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 
-[submodule "installed-packages"]
-	path = installed-packages
-	url = https://gist.github.com/1399454bb298a5241517219faf96db57.git
-	
+[submodule "packages"]
+	path = packages
+	url = https://gist.github.com/9c0590cbef82181ea508d9fe9d7dd07e.git
+
 [submodule "Vundle.vim"]
 	path = Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
