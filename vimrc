@@ -23,12 +23,11 @@ call vundle#end()            " All of your Plugins must be added before the foll
 filetype plugin indent on    
 
 set relativenumber " Relative line numbers
-
 set showcmd " show command in bottom bar
-
 set wildmenu " visual autocomplete for command menu 
-
 set laststatus=2 " display the statusline all the time
+
+set clipboard=unnamedplus "enable yanking to system clipboard
 
 " sets the vim-airline theme
 let g:airline_theme='solarized' 
