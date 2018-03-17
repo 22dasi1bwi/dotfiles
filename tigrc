@@ -1,0 +1,2 @@
+bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
+bind main B !git rebase --autosquash -i %(commit)

@@ -6,6 +6,7 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
+    ~/.tigrc: tigrc
     ~/.vimrc: vimrc
     ~/.vim/bundle/Vundle.vim:
                 create: true
