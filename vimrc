@@ -57,6 +57,8 @@ set smartcase           " no ignorecase if Uppercase char present
 
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell        " turn off visual bell
+set undofile
+set undodir=~/.vim/undodir
 
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
