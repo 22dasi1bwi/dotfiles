@@ -8,31 +8,31 @@
 	conflictstyle = diff3	
 	keepBackup=false
 [alias]
-	lg = log --color --graph --pretty=format:'%C(bold magenta)%h%Creset-%C(bold yellow)%d%Creset%s%C(bold green)(%cr)%C(bold white)<%an>%Creset' --abbrev-commit
-	lga = log --branches --remotes --tags --color --graph --pretty=format:'%C(bold magenta)%h%Creset-%C(bold yellow)%d%Creset%s%C(bold green)(%cr)%C(bold white)<%an>%Creset' --abbrev-commit
-	co = checkout
-	ci = commit
-	br = branch
-	st = status
-	rb = rebase
-	rbm = rebase origin/master
-	pu = push
-	aa = add .
-	fe = fetch
-	feo = fetch origin
-	re = reset
-	cob = checkout -b 
-	cp = cherry-pick
-	dist = diff --staged
-	p = pull 
-	pmr = !sh -c 'git pull $1 refs/merge-requests/$2/head' -
-	cmr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
-	clf = clean -f
-	rl = ref log
-	com = checkout master
-	clean-merged = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
-	uc = reset --soft HEAD~1
-	ac = !git add . && git commit -am
+	aa = add . # adding all files to the stage
+	ac = !git add . && git commit -am # adding all files to the stage and open the commit message dialog
+	br = branch # BRANCH shortcut 
+	ci = commit # COMMIT shortcut
+	clean-merged = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d # DELETE all local branches which are not yet integrated into master
+	clf = clean -f # DELETE all files forced
+	cmr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' - # CHECKOUT a MR from a repository ($1) with a specific number ($2)
+	co = checkout # CHECKOUT shortcut
+	cob = checkout -b  # CHECKOUT a new branch
+	com = checkout master # CHECKOUT the master branch
+	cp = cherry-pick # CHERRY-PICK shortcut
+	df = log --diff-filter=D --summary # SUMMARY of all deleted files in the given hash
+	dist = diff --staged # SHOW all changes which are in the staging area
+	fe = fetch # FETCH shortcut
+	feo = fetch origin # FETCH from the standard repository 'origin'
+	p = pull # PULL shortcut
+	pmr = !sh -c 'git pull $1 refs/merge-requests/$2/head' - # PULL the changes from an existing repository ($1) and branch ($2)
+	pu = push # PUSH shortcut
+	rb = rebase # REBASE shortcut
+	rbm = rebase origin/master # REBASE shortcut for origin/master branch
+	re = reset # RESET shortcut
+	reh = !sh -c 'git reset HEAD~$1' - # soft RESET the current commit
+	rev = !sh -c 'git show $1 -- $2 | git apply -R' - # soft REVERT of changes to a file already commited, where $1 is the hash and $2 is the file
+	rl = ref log # REFLOG shortcut
+	st = status # STATUS shortcut
 
 [color]
 	diff = auto
