@@ -19,6 +19,10 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'mhinz/vim-startify' " The fancy start screen for Vim 
 
+Plugin 'tpope/vim-fireplace' " Connector to clojure
+
+Plugin 'ctrlp.vim' " fuzzy finder inside of vim
+
 call vundle#end()            " All of your Plugins must be added before the following line
 filetype plugin indent on    
 
@@ -27,6 +31,7 @@ set showcmd " show command in bottom bar
 set wildmenu " visual autocomplete for command menu 
 set laststatus=2 " display the statusline all the time
 
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " exclude certain file types
 set clipboard=unnamedplus "enable yanking to system clipboard
 
 " sets the vim-airline theme
