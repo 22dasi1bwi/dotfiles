@@ -21,6 +21,11 @@
                 path: 'fish'
                 force: true
     ~/.gitconfig: gitconfig
+    ~/.i3:
+                create: true
+                path: 'i3'
+                force: true
+    ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.config/dconf:
                 create: true
