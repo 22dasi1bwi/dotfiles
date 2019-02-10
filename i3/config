@@ -164,6 +164,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# swap caps lock and escape
+exec --no-startup-id setxkbmap -option 'caps:escape'
+
 # i3-gaps
 gaps inner 10
 gaps outer 0
