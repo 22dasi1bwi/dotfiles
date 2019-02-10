@@ -40,7 +40,6 @@ URxvt*bolditalicFont:
 ! interface
 URxvt*scrollBar: false
 URxvt*transparent: true
-URxvt*internalBorder: 0
 
 ! special
 *.foreground:   #c5c8c6

@@ -27,7 +27,6 @@ call vundle#end()            " All of your Plugins must be added before the foll
 filetype plugin indent on    
 
 set relativenumber " Relative line numbers
-set showcmd " show command in bottom bar
 set wildmenu " visual autocomplete for command menu 
 set laststatus=2 " display the statusline all the time
 
@@ -35,18 +34,18 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 set clipboard=unnamedplus "enable yanking to system clipboard
 
 " sets the vim-airline theme
-let g:airline_theme='solarized' 
+" let g:airline_theme='solarized' 
 
 " sets the vim-airline theme
-let g:airline_solarized_bg='dark'
+" let g:airline_solarized_bg='dark'
 
 set scrolloff=3         " keep 3 lines when scrolling
 set ai                  " set auto-indenting on for programming
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-colorscheme solarized
-set background=dark
+" colorscheme solarized
+" set background=dark
 " set termguicolors
 
 set showcmd             " display incomplete commands
