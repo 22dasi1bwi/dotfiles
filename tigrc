@@ -1,3 +1,6 @@
 bind generic 9 !@sh -c "git show -s --format=%s %(commit) | xclip -selection c"
-bind main B !git rebase --autosquash -i %(commit)
-bind status a !?git commit --amend
+bind    main    B   !git rebase --autosquash -i %(commit)^
+bind    main    F   !git commit --fixup=%(commit)
+bind    main    H   !@sh -c "echo %(commit) | xclip --clipboard"
+bind    main    A   !git commit --amend
+bind    status  A   !git commit --amend
