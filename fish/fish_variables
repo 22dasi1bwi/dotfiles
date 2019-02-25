@@ -3,6 +3,23 @@
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+
+# --------------- ABBREVIATIONS ----------------------------
+SETUVAR _fish_abbr_supu:sudo pacman -Syu
+SETUVAR _fish_abbr_sups:sudo pacman -S
+SETUVAR _fish_abbr_g:git
+SETUVAR _fish_abbr_yau:yaourt -Syu
+SETUVAR _fish_abbr_cdo:cd /home/sda/projects/mbconnect/docker
+SETUVAR _fish_abbr_t:tig
+SETUVAR _fish_abbr_tom:tig origin/master
+SETUVAR _fish_abbr_cm:cd /home/sda/mbc
+SETUVAR _fish_abbr_cs:cd /home/sda/soe
+SETUVAR _fish_abbr_h:/home/sda
+SETUVAR _fish_abbr_c:cpd
+SETUVAR _fish_abbr_s:soe
+SETUVAR _fish_abbr_dotf:cd /home/sda/projects/self/dotfiles
+# -----------------------------------------------------------
+
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
