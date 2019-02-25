@@ -14,7 +14,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Hack 10
+font pango:Hack 12
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -122,12 +122,6 @@ bindsym $mod+Shift+s sticky toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+g focus child
-
 bar {
 	status_command i3status
 	status_command i3blocks
@@ -186,8 +180,20 @@ exec --no-startup-id setxkbmap -option 'caps:escape'
 gaps inner 10
 gaps outer 0
 
-# set correct order of monitors - TODO: different profiles needed
-exec --no-startup-id xrandr --output DP-0.2 --mode 1920x1200 --pos 1920x0 --rotate normal --output DP-0.1 --mode 1920x1200 --pos 3840x0 --rotate normal --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
+# Profiles for work layout
+set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
+bindsym $mod+p mode $displayMode
+mode $displayMode {
+    bindsym w exec --no-startup-id "~/.i3/scripts/work-display.sh"; \
+                mode "default"
+    bindsym h exec --no-startup-id "~/.i3/scripts/home-display.sh"; \
+                mode "default"
+    bindsym l exec --no-startup-id "~/.i3/scripts/laptop-display.sh"; \
+                mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # set desktop background with custom effect
 exec --no-startup-id betterlockscreen -w dim
