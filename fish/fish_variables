@@ -20,6 +20,7 @@ SETUVAR _fish_abbr_s:soe
 SETUVAR _fish_abbr_dotf:cd /home/sda/projects/self/dotfiles
 SETUVAR _fish_abbr_vpnUp:nmcli con up id NT --ask
 SETUVAR _fish_abbr_vpnDown:nmcli con down id NT
+SETUVAR _fish_abbr_vpnStatus:nmcli connection show | grep -w "NT"
 # -----------------------------------------------------------
 
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
