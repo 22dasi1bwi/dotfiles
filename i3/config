@@ -62,13 +62,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # configure workspaces
-workspace "0:Vim" output DP-0.2
-workspace "1:Web" output eDP-1-1
-workspace "2:Work" output DP-0.2
-workspace "3:Shell" output DP-0.1
-workspace "4:Media" output DP-0.1
-workspace "5:Tools" output DP-0.1
-workspace "9:Postman" output DP-0.1
+workspace "0:Vim" output DP-0.2 HDMI-1
+workspace "1:Web" output eDP-1-1 DP-1
+workspace "2:Work" output DP-0.2 DVI-D-1
+workspace "3:Shell" output DP-0.1 HDMI-1
+workspace "4:Media" output DP-0.1 HDMI-1
+workspace "5:Tools" output DP-0.1 HDMI-1
+workspace "9:Postman" output DP-0.1 HDMI-1
 
 bindsym $mod+0 workspace 0:Vim
 bindsym $mod+1 workspace 1:Web
