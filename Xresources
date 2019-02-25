@@ -13,29 +13,21 @@ URxvt.urlLauncher: xdg-open
 URxvt.urlButton: 1
 URxvt.underlineURLs: True
 
-URxvt.copyCommand:  xclip -i -selection clipboard
-URxvt.pasteCommand: xclip -o -selection clipboard
-
 ! Keybindings
-URxvt.keysym.Mod1-c: clipboard:copy
-URxvt.keysym.Mod1-v: clipboard:paste
-URxvt.keysym.Mod4-C-v: clipboard:paste_escaped
-URxvt.keysym.M-c: clipboard:copy
-URxvt.keysym.M-v: clipboard:paste
-URxvt.keysym.M-C-v: clipboard:paste_escaped
+! copy and paste are down via a script in /usr/lib/urxvt/perl/{clipboard, copy}
+URxvt.keysym.Shift-Control-C: perl:copy:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
 URxvt.keysym.M-Escape: keyboard-select:activate
 URxvt.keysym.C-Escape: keyboard-select:activate
 URxvt.keysym.M-u: url-select:select_next
 
 ! Fonts
-
-URxvt.font: xft:Inconsolata-12
-URxvt.boldFont: xft:Inconsolata-12
+URxvt.font:         xft:Hack-Regular:pixelsize=15,xft:Symbola
+URxvt.boldFont:     xft:Hack-Bold:pixelsize=15:weight=bold,xft:Symbola
+URxvt.italicFont:   xft:Hack-RegularOblique:pixelsize=15:slant=italic,xft:Symbola
 URxvt.letterSpace: -1
 URxvt*lineSpace: -1
-
-URxvt*italicFont: 
-URxvt*bolditalicFont: 
 
 ! interface
 URxvt*scrollBar: false
@@ -86,7 +78,6 @@ urxvt*background:    rgba:0020/0200/0200/c800
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
-URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 URxvt.keysym.C-Up:     font-size:increase
