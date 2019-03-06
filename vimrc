@@ -33,6 +33,14 @@ set laststatus=2 " display the statusline all the time
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " exclude certain file types
 set clipboard=unnamedplus "enable yanking to system clipboard
 
+" Indentation
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab               " expand tabs to spaces
+set list                    " make tabs (and other whitespaces) visible
+set listchars=tab:›\ ,trail:·,nbsp:·,eol:¬
+
 " sets the vim-airline theme
 " let g:airline_theme='solarized' 
 
