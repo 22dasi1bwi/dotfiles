@@ -3,26 +3,23 @@
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
-
-# --------------- ABBREVIATIONS ----------------------------
-SETUVAR _fish_abbr_supu:sudo pacman -Syu
-SETUVAR _fish_abbr_sups:sudo pacman -S
-SETUVAR _fish_abbr_g:git
-SETUVAR _fish_abbr_yau:yaourt -Syu
-SETUVAR _fish_abbr_cdo:cd /home/sda/projects/mbconnect/docker
-SETUVAR _fish_abbr_t:tig
-SETUVAR _fish_abbr_tom:tig origin/master
-SETUVAR _fish_abbr_cm:cd /home/sda/mbc
-SETUVAR _fish_abbr_cs:cd /home/sda/soe
-SETUVAR _fish_abbr_h:/home/sda
 SETUVAR _fish_abbr_c:cpd
+SETUVAR _fish_abbr_cdo:cd\x20/home/sda/projects/mbconnect/docker
+SETUVAR _fish_abbr_cm:cd\x20/home/sda/mbc
+SETUVAR _fish_abbr_cs:cd\x20/home/sda/soe
+SETUVAR _fish_abbr_dotf:cd\x20/home/sda/projects/self/dotfiles
+SETUVAR _fish_abbr_g:git
+SETUVAR _fish_abbr_h:/home/sda
 SETUVAR _fish_abbr_s:soe
-SETUVAR _fish_abbr_dotf:cd /home/sda/projects/self/dotfiles
-SETUVAR _fish_abbr_vpnUp:nmcli con up id NT --ask
-SETUVAR _fish_abbr_vpnDown:nmcli con down id NT
-SETUVAR _fish_abbr_vpnStatus:nmcli connection show | grep -w "NT"
-# -----------------------------------------------------------
-
+SETUVAR _fish_abbr_sdn:shutdown\x20now
+SETUVAR _fish_abbr_sups:sudo\x20pacman\x20\x2dS
+SETUVAR _fish_abbr_supu:sudo\x20pacman\x20\x2dSyu
+SETUVAR _fish_abbr_t:tig
+SETUVAR _fish_abbr_tom:tig\x20origin/master
+SETUVAR _fish_abbr_vpnDown:nmcli\x20con\x20down\x20id\x20NT
+SETUVAR _fish_abbr_vpnStatus:nmcli\x20connection\x20show\x20\x7c\x20grep\x20\x2dw\x20NT
+SETUVAR _fish_abbr_vpnUp:nmcli\x20con\x20up\x20id\x20NT\x20\x2d\x2dask
+SETUVAR _fish_abbr_yau:yaourt\x20\x2dSyu
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
