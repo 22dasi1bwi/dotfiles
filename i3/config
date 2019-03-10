@@ -188,19 +188,14 @@ bindsym $mod+r mode "resize"
 new_window pixel 0
 default_border pixel 1
 
-# Media player controls TBD!
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
-# swap caps lock and escape
+# Swap caps lock and escape
 exec --no-startup-id setxkbmap -option 'caps:escape'
 
 # i3-gaps
 gaps inner 10
 gaps outer 0
 
-# Profiles for work layout
+# Profiles for display layout
 set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
 bindsym $mod+p mode $displayMode
 mode $displayMode {
@@ -215,7 +210,7 @@ mode $displayMode {
     bindsym Escape mode "default"
 }
 
-# set desktop background with custom effect
+# Set desktop background with custom effect
 exec --no-startup-id betterlockscreen -w dim
 bindsym $mod+m exec betterlockscreen -l dim
 
