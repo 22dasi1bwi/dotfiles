@@ -121,14 +121,34 @@ bindsym $mod+Shift+s sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+set $focused-color       #417fa8
+
+# window colors
+client.focused          $bg-color           $bg-color          $text-color          $focused-color
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 bar {
-	status_command i3status
-	status_command i3blocks
-    	strip_workspace_numbers yes
-	font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-    	font pango:Hack 8
+        status_command i3status
+        status_command i3blocks
+        strip_workspace_numbers yes
+        font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+        font pango:Hack 8
+        colors {
+            background $bg-color
+                separator #757575
+                                    #border             background         text
+                focused_workspace  $focused-color       $focused-color          $text-color
+                inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+                urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+        }
     }
+exec --no-startup-id nm-applet
 bindsym $mod+u border none
 
 # reload the configuration file
