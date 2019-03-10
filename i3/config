@@ -203,3 +203,8 @@ bindsym $mod+m exec betterlockscreen -l dim
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Taking screenshots - Please note: ~/Pictures/screenshots folder and 'scrot' utility are necessary to make this work
+bindsym --release Print exec scrot -m '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots/' # multiple displays
+bindsym --release Shift+Print exec scrot -s '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots/' # selective mode
+bindsym --release $mod+Shift+Print exec scrot -u '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots/' # curently focused window
