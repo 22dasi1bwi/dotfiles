@@ -2,6 +2,7 @@ set nocompatible                                                                
 filetype on                                                                                     " detect type of file
 syntax on                                                                                       " turn syntax highlighting on by default
 
+" Run :PluginInstall inside vim  to install all the plugins
 set rtp+=~/.vim/bundle/Vundle.vim                                                               " set the runtime path to include Vundle and initialize
 call vundle#begin()
 
@@ -68,6 +69,7 @@ com! ToJson %!python -m json.tool
 let mapleader = "\<Space>"                                                                      " use 'Space' as a leader key
 nnoremap <Leader>w :w<CR>                                                                       " to save a file in normal mode
 nnoremap <Leader>q :q<CR>                                                                       " to quit a file in normal mode
+nnoremap <Leader>wq :wq<CR>                                                                     " to save and quit a file in normal mode
 vmap <Leader>y "+y                                                                              " to yank in visual mode
 vmap <Leader>d "+d                                                                              " to delete in visual mode
 vmap <Leader>p "+p                                                                              " to paste in line in visual mode
