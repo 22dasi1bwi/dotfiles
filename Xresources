@@ -8,19 +8,27 @@ URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
 ! Extensions
-URxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
+URxvt.perl-ext-common: default,clipboard,keyboard-select,font-size,url-select
 URxvt.urlLauncher: xdg-open
 URxvt.urlButton: 1
 URxvt.underlineURLs: True
 
 ! Keybindings
-! copy and paste are down via a script in /usr/lib/urxvt/perl/{clipboard, copy}
-URxvt.keysym.Shift-Control-C: perl:copy:copy
+URxvt.keysym.Shift-Control-C: :copy:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 URxvt.keysym.M-Escape: keyboard-select:activate
 URxvt.keysym.C-Escape: keyboard-select:activate
 URxvt.keysym.M-u: url-select:select_next
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 
 ! Fonts
 URxvt.font:         xft:Hack-Regular:pixelsize=15,xft:Symbola
@@ -80,9 +88,3 @@ URxvt.preeditType: OverTheSpot
 
 URxvt.iso14755_52: false
 
-URxvt.keysym.C-Up:     font-size:increase
-URxvt.keysym.C-Down:   font-size:decrease
-URxvt.keysym.C-S-Up:   font-size:incglobal
-URxvt.keysym.C-S-Down: font-size:decglobal
-URxvt.keysym.C-equal:  font-size:reset
-URxvt.keysym.C-slash:  font-size:show
