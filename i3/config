@@ -192,7 +192,7 @@ default_border pixel 1
 exec --no-startup-id setxkbmap -option 'caps:escape'
 
 # i3-gaps
-gaps inner 10
+gaps inner 3
 gaps outer 0
 
 # Profiles for display layout
