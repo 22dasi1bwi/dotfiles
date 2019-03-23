@@ -5,10 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/packages:
-                create: true
-                path: packages
-                force: true
     ~/.tmux.conf: tmux.conf
     ~/.tigrc: tigrc
     ~/.vimrc: vimrc
@@ -37,6 +33,5 @@
                 force: true
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
     - [mkdir -p ~/.vim/undodir, Adding vim undo directory]
 
