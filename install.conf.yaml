@@ -25,6 +25,10 @@
                 create: true
                 path: 'i3'
                 force: true
+    ~/.urxvt:
+                create: true
+                path: 'urxvt'
+                force: true
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.config/dconf:
