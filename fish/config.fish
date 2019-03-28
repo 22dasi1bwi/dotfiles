@@ -1,1 +1,1 @@
-set -gx PATH $PATH ~/projects/mbconnect/docker/
+set -gx PATH ~/projects/mbconnect/docker/ ~/.local/bin $PATH
