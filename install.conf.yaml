@@ -28,5 +28,6 @@
     ~/.xinitrc: xinitrc
 
 - shell:
+    - [git submodule update --init --recursive, Installing submodules]
     - [mkdir -p ~/.vim/undodir, Adding vim undo directory]
 
