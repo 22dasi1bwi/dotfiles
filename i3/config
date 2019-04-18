@@ -61,25 +61,25 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# default workspace layout
+workspace_layout tabbed
+
 # configure workspaces
-workspace "0:Vim" output DP-0.2 HDMI-1
+workspace "0:Files" output DP-0.1 HDMI-1
 workspace "1:Web" output eDP-1-1 DP-1
 workspace "2:Work" output DP-0.2 DVI-D-1
 workspace "3:Shell" output DP-0.1 HDMI-1
 workspace "4:Media" output DP-0.1 HDMI-1
 workspace "5:Tools" output DP-0.1 HDMI-1
-workspace "9:Postman" output DP-0.1 HDMI-1
 
-bindsym $mod+0 workspace 0:Vim
+bindsym $mod+0 workspace 0:Files
 bindsym $mod+1 workspace 1:Web
 bindsym $mod+2 workspace 2:Work
 bindsym $mod+3 workspace 3:Shell
 bindsym $mod+4 workspace 4:Media
 bindsym $mod+5 workspace 5:Tools
-bindsym $mod+9 workspace 9:Postman
 
-assign [class="Vim"] 0:Vim
-assign [class="gVim"] 0:Vim
+assign [class="Nautilus"] 0:Files
 assign [class="Chromium"] 1:Web
 assign [class="Firefox"] 1:Web
 assign [class="Eclipse"] 2:Work
@@ -88,16 +88,15 @@ assign [class="Fish"] 3:Shell
 assign [class="Slack"] 4:Media
 for_window [class="Spotify"] 4:Media
 assign [class="Putty"] 5:Tools
-assign [class="Postman"] 9:Postman
+assign [class="Postman"] 5:Tools
 
 # move focused container to workspace
-bindsym $mod+Shift+0 move container to workspace 0:Vim
+bindsym $mod+Shift+0 move container to workspace 0:Files
 bindsym $mod+Shift+1 move container to workspace 1:Web
 bindsym $mod+Shift+2 move container to workspace 2:Work
 bindsym $mod+Shift+3 move container to workspace 3:Shell
 bindsym $mod+Shift+4 move container to workspace 4:Media
 bindsym $mod+Shift+5 move container to workspace 5:Tools
-bindsym $mod+Shift+9 move container to workspace 9:Postman
 
 # split in horizontal orientation
 bindsym $mod+x split v
