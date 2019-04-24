@@ -4,7 +4,7 @@
 [core]
 	editor = vim
 [merge]
-        tool = mymeld
+    tool = mymeld
 	conflictstyle = diff3	
 	keepBackup=false
 [alias]
@@ -23,6 +23,7 @@
 	dist = diff --staged # SHOW all changes which are in the staging area
 	fe = fetch # FETCH shortcut
 	feo = fetch origin # FETCH from the standard repository 'origin'
+	fea = fetch azure # FETCH from repository 'azure'
 	p = pull # PULL shortcut
 	pmr = !sh -c 'git pull $1 refs/merge-requests/$2/head' - # PULL the changes from an existing repository ($1) and branch ($2)
 	pu = push # PUSH shortcut
