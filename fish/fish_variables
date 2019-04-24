@@ -17,6 +17,7 @@ SETUVAR _fish_abbr_sdn:shutdown\x20now
 SETUVAR _fish_abbr_sups:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_supu:sudo\x20pacman\x20\x2dSyu
 SETUVAR _fish_abbr_t:tig
+SETUVAR _fish_abbr_tam:tig\x20azure/master
 SETUVAR _fish_abbr_tom:tig\x20origin/master
 SETUVAR _fish_abbr_vpnDown:nmcli\x20con\x20down\x20id\x20NT
 SETUVAR _fish_abbr_vpnStatus:nmcli\x20connection\x20show\x20\x7c\x20grep\x20\x2dw\x20NT
