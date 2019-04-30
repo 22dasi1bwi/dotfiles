@@ -20,6 +20,7 @@
                 create: true
                 path: 'i3'
                 force: true
+    ~/.ideavimrc: intellij/ideavimrc
     ~/.urxvt:
                 create: true
                 path: 'urxvt'
