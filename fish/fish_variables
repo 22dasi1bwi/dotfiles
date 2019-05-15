@@ -4,6 +4,7 @@ SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr__2D_:cd\x20\x2d
+SETUVAR _fish_abbr_acc:cd\x20/home/sda/projects/acc/
 SETUVAR _fish_abbr_c:cpd
 SETUVAR _fish_abbr_cdo:cd\x20/home/sda/projects/mbconnect/docker
 SETUVAR _fish_abbr_cm:cd\x20/home/sda/mbc
