@@ -89,6 +89,7 @@ assign [class="Slack"] 4:Media
 for_window [class="Spotify"] 4:Media
 assign [class="Putty"] 5:Tools
 assign [class="Postman"] 5:Tools
+assign [class="DBeaver"] 5:Tools
 
 # move focused container to workspace
 bindsym $mod+Shift+0 move container to workspace 0:Files
