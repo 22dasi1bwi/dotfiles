@@ -70,6 +70,7 @@ let mapleader = "\<Space>"                                                      
 nnoremap <Leader>w :w<CR>                                                                       " to save a file in normal mode
 nnoremap <Leader>q :q<CR>                                                                       " to quit a file in normal mode
 nnoremap <Leader>wq :wq<CR>                                                                     " to save and quit a file in normal mode
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 vmap <Leader>y "+y                                                                              " to yank in visual mode
 vmap <Leader>d "+d                                                                              " to delete in visual mode
 vmap <Leader>p "+p                                                                              " to paste in line in visual mode
