@@ -196,7 +196,7 @@ gaps inner 3
 gaps outer 0
 
 # Profiles for display layout
-set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
+set $displayMode "Set display mode [w]ork work-[n]ew [l]aptop [h]ome"
 bindsym $mod+p mode $displayMode
 mode $displayMode {
     bindsym l exec --no-startup-id "~/.i3/scripts/laptop-display.sh"; \
@@ -204,6 +204,8 @@ mode $displayMode {
     bindsym w exec --no-startup-id "~/.i3/scripts/work-display.sh"; \
                 mode "default"
     bindsym h exec --no-startup-id "~/.i3/scripts/home-display.sh"; \
+                mode "default"
+    bindsym n exec --no-startup-id "~/.i3/scripts/work-new-display.sh"; \
                 mode "default"
 
     bindsym Return mode "default"
