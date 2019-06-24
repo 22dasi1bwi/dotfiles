@@ -77,3 +77,6 @@ vmap <Leader>p "+p                                                              
 vmap <Leader>P "+P                                                                              " to paste before line in visual mode
 nmap <Leader>p "+p                                                                              " to paste in line in normal mode
 nmap <Leader>P "+P                                                                              " to paste before line in visual mode
+vnoremap J :m '>+1<CR>gv=gv                                                                     " move selected text up
+vnoremap K :m '<-1<CR>gv=gv                                                                     " move selected text down
+vnoremap . :normal.<CR>                                                                         " make . to work with visually selected lines
