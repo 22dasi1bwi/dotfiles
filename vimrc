@@ -66,17 +66,31 @@ let g:netrw_winsize = 20
 com! ToJson %!python -m json.tool
 
 " Mappings
-let mapleader = "\<Space>"                                                                      " use 'Space' as a leader key
-nnoremap <Leader>w :w<CR>                                                                       " to save a file in normal mode
-nnoremap <Leader>q :q<CR>                                                                       " to quit a file in normal mode
-nnoremap <Leader>wq :wq<CR>                                                                     " to save and quit a file in normal mode
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/                                                          " to replace all occurrences of the word under the cursor
-vmap <Leader>y "+y                                                                              " to yank in visual mode
-vmap <Leader>d "+d                                                                              " to delete in visual mode
-vmap <Leader>p "+p                                                                              " to paste in line in visual mode
-vmap <Leader>P "+P                                                                              " to paste before line in visual mode
-nmap <Leader>p "+p                                                                              " to paste in line in normal mode
-nmap <Leader>P "+P                                                                              " to paste before line in visual mode
-vnoremap J :m '>+1<CR>gv=gv                                                                     " move selected text up
-vnoremap K :m '<-1<CR>gv=gv                                                                     " move selected text down
-vnoremap . :normal.<CR>                                                                         " make . to work with visually selected lines
+" use 'Space' as a leader key
+let mapleader = "\<Space>"
+" to save a file in normal mode
+nnoremap <Leader>w :w<CR>
+" to quit a file in normal mode
+nnoremap <Leader>q :q<CR>
+" to save and quit a file in normal mode
+nnoremap <Leader>wq :wq<CR>
+" to replace all occurrences of the word under the cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+" to yank in visual mode
+vmap <Leader>y "+y
+" to delete in visual mode
+vmap <Leader>d "+d
+" to paste in line in visual mode
+vmap <Leader>p "+p
+" to paste before line in visual mode
+vmap <Leader>P "+P
+" to paste in line in normal mode
+nmap <Leader>p "+p
+" to paste before line in visual mode
+nmap <Leader>P "+P
+" move selected text up
+vnoremap J :m '>+1<CR>gv=gv
+" move selected text down
+vnoremap K :m '<-2<CR>gv=gv
+" make . to work with visually selected lines
+vnoremap . :normal.<CR>
