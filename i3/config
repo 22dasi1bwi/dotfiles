@@ -81,7 +81,7 @@ bindsym $mod+5 workspace 5:Tools
 
 assign [class="Nautilus"] 0:Files
 assign [class="Chromium"] 1:Web
-assign [class="Firefox"] 1:Web
+assign [class="firefox"] 1:Web
 assign [class="Eclipse"] 2:Work
 assign [class="Urxvt"] 3:Shell
 assign [class="Fish"] 3:Shell
