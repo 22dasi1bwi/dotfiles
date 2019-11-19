@@ -24,7 +24,8 @@ SETUVAR _fish_abbr_v:vim
 SETUVAR _fish_abbr_vpnDown:nmcli\x20con\x20down\x20id\x20NT
 SETUVAR _fish_abbr_vpnStatus:nmcli\x20connection\x20show\x20\x7c\x20grep\x20\x2dw\x20NT
 SETUVAR _fish_abbr_vpnUp:nmcli\x20con\x20up\x20id\x20NT\x20\x2d\x2dask
-SETUVAR _fish_abbr_yau:yaourt\x20\x2dSyu
+SETUVAR _fish_abbr_yays:yay\x20\x2dS
+SETUVAR _fish_abbr_yayu:yay\x20\x2dSyu
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
@@ -46,7 +47,7 @@ SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_greeting:Do\x20not\x20wish\x20it\x20was\x20easier,\x20wish\x20you\x20\were\x20better.
+SETUVAR fish_greeting:Do\x20not\x20wish\x20it\x20was\x20easier\x2c\x20wish\x20you\x20were\x20better\x2e
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
