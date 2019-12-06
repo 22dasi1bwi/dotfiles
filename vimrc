@@ -62,8 +62,11 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 20
 
-" Smooth way to format to json
+" Smooth way to format json
 com! ToJson %!python -m json.tool
+
+" Smooth way to format xml
+com! ToXml :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 
 " Mappings
 " use 'Space' as a leader key
@@ -76,6 +79,8 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>wq :wq<CR>
 " to replace all occurrences of the word under the cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+" Parse stacktrace
+nnoremap <Leader>t :%s/\\n\\t/\r/g<CR>
 " to yank in visual mode
 vmap <Leader>y "+y
 " to delete in visual mode
