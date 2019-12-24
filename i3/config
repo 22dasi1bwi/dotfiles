@@ -138,7 +138,7 @@ bar {
         status_command i3blocks
         strip_workspace_numbers yes
         font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-        font pango:Hack 8
+        font pango:Hack 10
         colors {
             background $bg-color
                 separator #757575
@@ -213,7 +213,6 @@ mode $displayMode {
 }
 
 # Set desktop background with custom effect
-exec --no-startup-id betterlockscreen -w dim
 bindsym $mod+m exec betterlockscreen -l dim
 
 # Pulse Audio controls

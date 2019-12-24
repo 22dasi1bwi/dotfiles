@@ -20,6 +20,10 @@
                 create: true
                 path: 'i3'
                 force: true
+    ~/.config/i3blocks:
+                create: true
+                path: 'i3/i3blocks'
+                force: true
     ~/.ideavimrc: intellij/ideavimrc
     ~/.urxvt:
                 create: true

@@ -1,0 +1,22 @@
+[kubernetes]
+command=~/.config/i3blocks/kubernetes/kubernetes
+interval=10
+
+[volume]
+command=~/.config/i3blocks/volume/volume
+LABEL=♪ 
+interval=once
+signal=10
+
+[battery2]
+command=~/.config/i3blocks/battery2/battery2
+markup=pango
+interval=30
+
+[time]
+command=~/.config/i3blocks/time/time
+interval=1
+STRFTIME_FORMAT=%Y-%m-%d %H:%M
+TZONES=$DEFAULT_TZ,Brazil/East,Australia/Brisbane,Asia/Calcutta
+TZ_LABELS=,Brazil,AU,Hyderabad
+
