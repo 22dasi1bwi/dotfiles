@@ -13,6 +13,7 @@ command=~/.config/i3blocks/volume/volume
 LABEL=♪ 
 interval=once
 signal=10
+interval=1
 
 [battery2]
 command=~/.config/i3blocks/battery2/battery2
