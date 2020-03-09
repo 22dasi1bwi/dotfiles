@@ -68,6 +68,9 @@ com! ToJson %!python -m json.tool
 " Smooth way to format xml
 com! ToXml :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 
+" Make avro files readable
+com! ToAvro %!strings $argv | grep "^\{" | tail -n +2
+
 " Mappings
 " use 'Space' as a leader key
 let mapleader = "\<Space>"
