@@ -128,4 +128,5 @@ nnoremap <silent><Leader>b :40vs +Ex<CR>
 nnoremap <silent><Leader>F :Files<CR>
 nnoremap <silent><Leader>B :Buffers<CR>
 nnoremap <silent><Leader>R :Rg<CR>
+nnoremap <silent><Leader>C :Commits<CR>
 
