@@ -2,26 +2,38 @@ set nocompatible                                                                
 filetype on                                                                                     " detect type of file
 syntax on                                                                                       " turn syntax highlighting on by default
 
-" Run :PluginInstall inside vim  to install all the plugins
+" Run :PluginInstall inside vim to install all the plugins
 set rtp+=~/.vim/bundle/Vundle.vim                                                               " set the runtime path to include Vundle and initialize
 call vundle#begin()
 
 " Plugins
 Plugin 'VundleVim/Vundle.vim'                                                                   " let Vundle manage Vundle, required
 Plugin 'tpope/vim-fugitive'                                                                     " git support in vim
-Plugin 'flazz/vim-colorschemes'                                                                 " one stop shop for vim colorschemes
 Plugin 'Yggdroot/indentLine'                                                                    " display the indention levels with thin vertical lines
-Plugin 'vim-airline/vim-airline'                                                                " a lean & mean status/tabline for vim that's light as air
-Plugin 'vim-airline/vim-airline-themes'                                                         " fancy themes
 Plugin 'ctrlp.vim'                                                                              " fuzzy finder inside of vim
-
+Plugin 'joshdick/onedark.vim'
+Plugin 'itchyny/lightline.vim'
 call vundle#end()                                                                               " all the plugins must be added before the following line
+colorscheme onedark
 
-let g:airline_powerline_fonts = 1                                                               " fancy symbols in status line 
+"" Plugin Configuration
+" Configure StatusLine; Especially adding the branch name
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+" Configure Ctrl-P; Exclude certain file types
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 set wildmenu                                                                                    " visual autocomplete for command menu 
 set laststatus=2                                                                                " display the statusline all the time
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']   " exclude certain file types
 set clipboard=unnamedplus                                                                       " enable yanking to system clipboard
 
 " Indentation
@@ -33,10 +45,10 @@ set list                                                                        
 set listchars=tab:›\ ,trail:·,nbsp:·,eol:¬
 
 set backspace=indent,eol,start                                                                  " make that backspace key work the way it should
-set background=dark                                                                             " dark background
 
 set showcmd                                                                                     " display incomplete commands
 set nobackup                                                                                    " do not keep a backup file
+set noshowmode                                                                                  " do not display vim's current mode again
 
 " Numbers
 set number                                                                                      " show line numbers
@@ -58,7 +70,7 @@ set undofile                                                                    
 set undodir=~/.vim/undodir                                                                      " path to the directory where the undo files are handled
 
 " Buffers & Windows
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 4
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 20
 
@@ -102,3 +114,9 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 " make . to work with visually selected lines
 vnoremap . :normal.<CR>
+" Moving in split windows
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <Leader>b :40vs +Ex<CR>
