@@ -10,7 +10,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'                                                                   " let Vundle manage Vundle, required
 Plugin 'tpope/vim-fugitive'                                                                     " git support in vim
 Plugin 'Yggdroot/indentLine'                                                                    " display the indention levels with thin vertical lines
-Plugin 'ctrlp.vim'                                                                              " fuzzy finder inside of vim
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'udalov/kotlin-vim'                                                                      " syntax highlighting for kotlin
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/lightline.vim'
 call vundle#end()                                                                               " all the plugins must be added before the following line
@@ -28,8 +30,8 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
-" Configure Ctrl-P; Exclude certain file types
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" Configure Fzf preview window
+let g:fzf_preview_window = ''                                                                   " use something like 'right:60%' to configure it
 
 set wildmenu                                                                                    " visual autocomplete for command menu 
 set laststatus=2                                                                                " display the statusline all the time
@@ -87,36 +89,43 @@ com! ToAvro %!strings $argv | grep "^\{" | tail -n +2
 " use 'Space' as a leader key
 let mapleader = "\<Space>"
 " to save a file in normal mode
-nnoremap <Leader>w :w<CR>
+nnoremap <silent><Leader>w :w<CR>
 " to quit a file in normal mode
-nnoremap <Leader>q :q<CR>
+nnoremap <silent><Leader>q :q<CR>
 " to save and quit a file in normal mode
-nnoremap <Leader>wq :wq<CR>
+nnoremap <silent><Leader>wq :wq<CR>
 " to replace all occurrences of the word under the cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+nnoremap <silent><Leader>s :%s/\<<C-r><C-w>\>/
 " Parse stacktrace
-nnoremap <Leader>t :%s/\\n\\t/\r/g<CR>
+nnoremap <silent><Leader>t :%s/\\n\\t/\r/g<CR>
 " to yank in visual mode
-vmap <Leader>y "+y
+vmap <silent><Leader>y "+y
 " to delete in visual mode
-vmap <Leader>d "+d
+vmap <silent><Leader>d "+d
 " to paste in line in visual mode
-vmap <Leader>p "+p
+vmap <silent><Leader>p "+p
 " to paste before line in visual mode
-vmap <Leader>P "+P
+vmap <silent><Leader>P "+P
 " to paste in line in normal mode
-nmap <Leader>p "+p
+nmap <silent><Leader>p "+p
 " to paste before line in visual mode
-nmap <Leader>P "+P
+nmap <silent><Leader>P "+P
 " move selected text up
-vnoremap J :m '>+1<CR>gv=gv
+vnoremap <silent>J :m '>+1<CR>gv=gv
 " move selected text down
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap <silent>K :m '<-2<CR>gv=gv
 " make . to work with visually selected lines
-vnoremap . :normal.<CR>
-" Moving in split windows
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <Leader>b :40vs +Ex<CR>
+vnoremap <silent>. :normal.<CR>
+" moving in split windows
+nnoremap <silent><C-H> <C-W><C-H>
+nnoremap <silent><C-J> <C-W><C-J>
+nnoremap <silent><C-K> <C-W><C-K>
+nnoremap <silent><C-L> <C-W><C-L>
+" open a tree view 
+nnoremap <silent><Leader>b :40vs +Ex<CR>
+
+" fzf 
+nnoremap <silent><Leader>F :Files<CR>
+nnoremap <silent><Leader>B :Buffers<CR>
+nnoremap <silent><Leader>R :Rg<CR>
+

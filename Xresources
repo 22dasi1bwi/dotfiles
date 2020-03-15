@@ -26,7 +26,6 @@ URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Right: \033[1;5C
 URxvt.keysym.Control-Left: \033[1;5D
-
 URxvt.keysym.C-equal:  font-size:reset
 URxvt.keysym.C-slash:  font-size:show
 
@@ -84,3 +83,4 @@ URxvt.depth: 32
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 URxvt.iso14755_52: false
+URxvt.internalBorder: 0 
