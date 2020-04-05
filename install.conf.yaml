@@ -8,6 +8,7 @@
     ~/.tigrc: tigrc
     ~/.vimrc: vimrc
     ~/.ripgrep: ripgrep
+    ~/.k9s/skin.yml: k9s/skin.yml
     ~/.vim/bundle/Vundle.vim:
                 create: true
                 path: 'Vundle.vim'
