@@ -9,6 +9,7 @@ call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'                                                                   " let Vundle manage Vundle, required
 Plugin 'tpope/vim-fugitive'                                                                     " git support in vim
+Plugin 'tpope/vim-surround'                                                                     " handy mappings for surroundings
 Plugin 'Yggdroot/indentLine'                                                                    " display the indention levels with thin vertical lines
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -37,6 +38,7 @@ set wildmenu                                                                    
 set laststatus=2                                                                                " display the statusline all the time
 
 set clipboard=unnamedplus                                                                       " enable yanking to system clipboard
+set lazyredraw                                                                                  " don't redraw on every action (useful for macros)
 
 " Indentation
 set tabstop=4
