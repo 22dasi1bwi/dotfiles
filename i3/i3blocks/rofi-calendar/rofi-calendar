@@ -17,7 +17,7 @@ case "$BLOCK_BUTTON" in
 esac
 case "$BLOCK_BUTTON" in
     1|2|3)
-export TERM=xterm
+export TERM=rxvt-unicode
 cal --color=always $month $year \
     | sed 's/\x1b\[[7;]*m/\<b\>\<u\>/g' \
     | sed 's/\x1b\[[27;]*m/\<\/u\>\<\/b\>/g' \

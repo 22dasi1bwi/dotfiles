@@ -1,12 +1,25 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BAT_PAGER:less\x20\x2dR
+SETUVAR --export BAT_THEME:TwoDark
+SETUVAR --export CM_LAUNCHER:rofi
+SETUVAR --export COLORTERM:rxvt\x2dunicode\x2d256color
+SETUVAR --export FD_OPTIONS:\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dexclude\x20\x2egit
+SETUVAR --export FZF_ALT_C_COMMAND:fd\x20\x2d\x2dtype\x20d\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dexclude\x20\x2egit
+SETUVAR --export FZF_CTRL_T_COMMAND:fd\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dexclude\x20\x2egit
+SETUVAR --export FZF_DEFAULT_COMMAND:git\x20ls\x2dfiles\x20\x2d\x2dcached\x20\x2d\x2dothers\x20\x2d\x2dexclude\x2dstandard\x20\x7c\x7c\x20fd\x20\x2d\x2dtype\x20f\x20\x2d\x2dtype\x20l\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dexclude\x20\x2egit
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dno\x2dmouse\x20\x2d\x2dheight\x2050\x25\x20\x2d1\x20\x2d\x2dreverse\x20\x2d\x2dmulti\x20\x2d\x2dinline\x2dinfo\x20\x2d\x2dpreview\x3d\x27bat\x20\x2d\x2dstyle\x3dnumbers\x20\x2d\x2dcolor\x3dalways\x20\x7b\x7d\x20\x7c\x7c\x20cat\x20\x7b\x7d\x202\x3e\x20/dev/null\x20\x7c\x20head\x20\x2d300\x27\x20\x2d\x2dpreview\x2dwindow\x3d\x27right\x3ahidden\x3awrap\x27\x20\x2d\x2dbind\x3d\x27ctrl\x2de\x3aexecute\x28bat\x20\x2d\x2dstyle\x3dnumbers\x20\x7b\x7d\x20\x7c\x7c\x20less\x20\x2df\x20\x7b\x7d\x29\x2cctrl\x2db\x3atoggle\x2dpreview\x2cctrl\x2dd\x3ahalf\x2dpage\x2ddown\x2cctrl\x2du\x3ahalf\x2dpage\x2dup\x27
+SETUVAR --export --path RIPGREP_CONFIG_PATH:/home/sda/\x2eripgrep
+SETUVAR --export TERM:rxvt\x2dunicode\x2d256color
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr__2D_:cd\x20\x2d
 SETUVAR _fish_abbr_acc:cd\x20/home/sda/projects/acc/
 SETUVAR _fish_abbr_c:cpd
 SETUVAR _fish_abbr_cdo:cd\x20/home/sda/projects/mbconnect/docker
+SETUVAR _fish_abbr_clr:clipmenu_rofi
 SETUVAR _fish_abbr_cm:cd\x20/home/sda/mbc
 SETUVAR _fish_abbr_cs:cd\x20/home/sda/soe
 SETUVAR _fish_abbr_dotf:cd\x20/home/sda/projects/self/dotfiles
@@ -37,6 +50,7 @@ SETUVAR fish_color_error:ff0000
 SETUVAR fish_color_escape:00a6b2
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:00a6b2
@@ -45,6 +59,7 @@ SETUVAR fish_color_quote:999900
 SETUVAR fish_color_redirection:00afff
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_greeting:Do\x20not\x20wish\x20it\x20was\x20easier\x2c\x20wish\x20you\x20were\x20better\x2e
@@ -53,3 +68,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR --export rxvt:rxvt\x2dunicode\x2d256color
