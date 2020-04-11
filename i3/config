@@ -56,7 +56,7 @@ assign [class="Eclipse"] 2:Work
 assign [class="Urxvt"] 3:Shell
 assign [class="Fish"] 3:Shell
 assign [class="Slack"] 4:Media
-for_window [class="Spotify"] 4:Media
+for_window [class="Spotify"] move to workspace 4:Media
 assign [class="Postman"] 5:Tools
 assign [class="DBeaver"] 5:Tools
 
