@@ -33,9 +33,13 @@
                 force: true
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
+    ~/Pictures/wallpapers:
+                create: true
+                path: 'wallpapers'
 
 - shell:
+    - [./variables.fish, Exporting necessary environment variables]
     - [git submodule update --init --recursive, Installing submodules]
     - [mkdir -p ~/.vim/undodir, Adding vim undo directory]
-    - [./variables.fish, Exporting necessary environment variables]
+    - [nitrogen --no-recurse ~/Pictures/wallpapers, Setting background]
 

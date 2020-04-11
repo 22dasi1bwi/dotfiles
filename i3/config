@@ -164,6 +164,7 @@ mode $displayMode {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+exec --no-startup-id nitrogen --restore
 
 # Set desktop background with custom effect
 bindsym $mod+m exec betterlockscreen -l dim
