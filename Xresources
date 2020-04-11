@@ -38,7 +38,7 @@ URxvt*lineSpace: -1
 
 ! interface
 URxvt*scrollBar: false
-URxvt*transparent: false
+URxvt*transparent: true
 urxvt.foreground: #aaaaaa
 
 ! special
